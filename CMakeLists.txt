@@ -64,9 +64,9 @@ CMAKE_DEPENDENT_OPTION(ENABLE_SDL2_FRONTEND "Enable the SDL2 frontend" ON "ENABL
 option(USE_SYSTEM_SDL2 "Use the system SDL2 lib (instead of the bundled one)" OFF)
 
 # Set bundled qt as dependent options.
-option(ENABLE_QT "Enable the Qt frontend" ON)
+option(ENABLE_QT "Enable the Qt frontend" OFF)
 option(ENABLE_QT_TRANSLATION "Enable translations for the Qt frontend" OFF)
-CMAKE_DEPENDENT_OPTION(ENABLE_QT_UPDATER "Enable built-in updater for the Qt frontend" ON "NOT IOS" OFF)
+CMAKE_DEPENDENT_OPTION(ENABLE_QT_UPDATER "Enable built-in updater for the Qt frontend" OFF "NOT IOS" OFF)
 
 CMAKE_DEPENDENT_OPTION(ENABLE_TESTS "Enable generating tests executable" ON "NOT IOS" OFF)
 CMAKE_DEPENDENT_OPTION(ENABLE_DEDICATED_ROOM "Enable generating dedicated room executable" ON "NOT ANDROID AND NOT IOS" OFF)
